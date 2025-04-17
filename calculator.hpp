@@ -1,11 +1,15 @@
 #ifndef __CALCULATOR_HPP
 #define __CALCULATOR_HPP
-
 #include <string>
-//initial push
+using namespace std;
 
-// this function should expect that `expression` has already been
-// validated and thus throw no exceptions
-double parse_number(const std::string &expression);
+// validates if a string is a properly formatted double number
+bool is_valid_double(const string &expression);
+
+// adds two double numbers represented as strings
+string add_strings(const string &a, const string &b);
+
+// helper to parse a number (already validated string), converts to actual double (used if needed)
+double parse_number(const string &expression);
 
 #endif // __CALCULATOR_HPP
